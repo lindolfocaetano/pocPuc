@@ -1,0 +1,135 @@
+﻿@{
+    ViewData["Title"] = "SLW";
+}
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@using static LogWeb.Helpers.PerfisDeAcesso;
+
+@if (!SignInManager.IsSignedIn(User))
+{
+    <div class="">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="jumbotron">
+                    <h1 class="display-4">Olá! Bem vindo ao SisLogWeb</h1>
+                    <p class="lead">um sistema de getão logística, inovador e desenvolvido para facilitar sua vida.</p>
+                    <hr class="my-4">
+                    <p>
+                        Para uma melhor experiencia de uso
+                        pedidimos que se
+                        <a asp-controller="Account" asp-action="Register">Cadastre-se </a>
+                        cadastre ou
+                        <a asp-controller="Account" asp-action="Login">efue o login</a>
+                        para acompanhar seus pedidos e solicitações.
+                    </p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" asp-controller="Account" asp-action="Register" role="button">Cadastro</a>
+                        <a class="btn btn-primary btn-lg" asp-controller="Account" asp-action="Login" role="button">Entrar</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@if (SignInManager.IsSignedIn(User) && User.Claims.Where(x => x.Type == "perfil").Select(y => y.Value).FirstOrDefault() == Perfis.Cliente.ToString())
+{
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+            <a asp-controller="CalculoFrete" asp-action="Index">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <span class="">Cotar Frete</span>
+                    </div>
+                    <div class="panel-body">
+                        <img src="~/images/deliveryTruck.svg" class="img-responsive" />
+                    </div>
+
+                </div>
+            </a>
+        </div>
+    </div>
+}
+
+@if (SignInManager.IsSignedIn(User) && User.Claims.Where(x => x.Type == "perfil").Select(y => y.Value).FirstOrDefault() == Perfis.Parceiro.ToString())
+{
+    <div class="row">
+
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+            <a asp-controller="CalculoFrete" asp-action="Index">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <span class="">Cotar Frete</span>
+                    </div>
+                    <div class="panel-body">
+                        <img src="~/images/deliveryTruck.svg" class="img-responsive" />
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+            <a asp-controller="CalculoFrete" asp-action="Index">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <span class="">WebServices</span>
+                    </div>
+                    <div class="panel-body text-center">
+                        <i class="fas fa-globe fa-9x"></i>
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+}
+
+@if (SignInManager.IsSignedIn(User) && User.Claims.Where(x => x.Type == "perfil").Select(y => y.Value).FirstOrDefault() == Perfis.Admin.ToString())
+{
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+            <a asp-controller="Manage" asp-action="ManagerUsers">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <span class="">Usuários</span>
+                    </div>
+                    <div class="panel-body text-center">
+                        <i class="fas fa-users-cog fa-6x"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+            <a asp-controller="" asp-action="">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <span class="">Configurar</span>
+                    </div>
+                    <div class="panel-body text-center">
+                        <i class="fas fa-cog fa-6x"></i>
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+            <a asp-controller="" asp-action="">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <span class="">WebServices</span>
+                    </div>
+                    <div class="panel-body text-center">
+                        <i class="fas fa-globe fa-6x"></i>
+                        
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+}

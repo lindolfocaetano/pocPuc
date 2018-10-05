@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogWeb", "LogWeb\LogWeb.csproj", "{97BDA63E-E5B5-43A5-82AF-91B8A566CCEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - LogWeb", "0 - LogWeb", "{E91DDAE6-F019-44E0-9DDF-F946049AA85C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seguranca", "Seguranca", "{4FE2E51B-B026-4F75-9245-5180C7993478}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegurancaAPI", "SegurancaAPI\SegurancaAPI.csproj", "{56880E73-EB51-45B1-B363-63C9F86CC5AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ControleFrete", "ControleFrete", "{808801F8-0377-446B-BCAD-5879B7A31564}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFreteApi", "ControleFreteApi\ControleFreteApi.csproj", "{24A1D7DA-ECFA-4D61-B9B8-BCA17AD42044}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFreteTests", "ControleFreteTests\ControleFreteTests.csproj", "{63D9D19C-B504-42C1-8684-788AD2850FD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97BDA63E-E5B5-43A5-82AF-91B8A566CCEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BDA63E-E5B5-43A5-82AF-91B8A566CCEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97BDA63E-E5B5-43A5-82AF-91B8A566CCEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BDA63E-E5B5-43A5-82AF-91B8A566CCEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56880E73-EB51-45B1-B363-63C9F86CC5AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56880E73-EB51-45B1-B363-63C9F86CC5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56880E73-EB51-45B1-B363-63C9F86CC5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56880E73-EB51-45B1-B363-63C9F86CC5AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A1D7DA-ECFA-4D61-B9B8-BCA17AD42044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A1D7DA-ECFA-4D61-B9B8-BCA17AD42044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A1D7DA-ECFA-4D61-B9B8-BCA17AD42044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A1D7DA-ECFA-4D61-B9B8-BCA17AD42044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D9D19C-B504-42C1-8684-788AD2850FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D9D19C-B504-42C1-8684-788AD2850FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D9D19C-B504-42C1-8684-788AD2850FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D9D19C-B504-42C1-8684-788AD2850FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{97BDA63E-E5B5-43A5-82AF-91B8A566CCEF} = {E91DDAE6-F019-44E0-9DDF-F946049AA85C}
+		{56880E73-EB51-45B1-B363-63C9F86CC5AA} = {4FE2E51B-B026-4F75-9245-5180C7993478}
+		{24A1D7DA-ECFA-4D61-B9B8-BCA17AD42044} = {808801F8-0377-446B-BCAD-5879B7A31564}
+		{63D9D19C-B504-42C1-8684-788AD2850FD0} = {808801F8-0377-446B-BCAD-5879B7A31564}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBFA8A80-9C50-4AB1-B09D-42348AC2BA64}
+	EndGlobalSection
+EndGlobal

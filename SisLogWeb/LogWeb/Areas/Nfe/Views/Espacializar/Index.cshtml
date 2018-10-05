@@ -1,0 +1,55 @@
+﻿@model LogWeb.Models.NfeListaViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+    <table id="notaFiscal"> </table>
+</body>
+</html>
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script>
+    /* Table initialisation */
+    var ulr = "http://localhost:55764/Nfe/Notas"
+    $(document).ready(function () {
+        $.getJSON("http://localhost:55764/Nfe/Notas", function (response) {
+            $('#notaFiscal').dataTable({
+                processing: true,
+                data: response,
+                columns: [
+                    { data: "endereco.xLgr" },
+                    { data: "endereco.cep" },
+                    { data: "endereco.uf" },
+                    { data: "endereco.xBairro" },
+                    { data: "endereco.xMun" },
+                    { data: "endereco.nro" },
+
+                ],
+                columnDefs: [
+                    {
+                        targets: -1, //-1 es la ultima columna y 0 la primera
+                        data: "endreco.cep",
+                        defaultContent: '<button type="button" class="btn btn-primary ">Espacializar</button>'
+                    },
+                    { orderable: false, searchable: false, targets: -1 } //Ultima columna no ordenable para botones
+                ]
+            })
+        })
+    });
+</script>

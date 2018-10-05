@@ -1,0 +1,73 @@
+﻿@model LogWeb.Models.CalculoFrete.CotarFreteViewModel
+
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-offset-3 col-lg-6">
+                <form method="post" asp-controller="CalculoFrete" asp-action="Cotar">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label>Cidade De Origem</label>
+                            @Html.DropDownList("IdCidadeorigem", new SelectList(Model.Cidades, "IdCidade", "NmCidade"), new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.IdCidadeDestino)
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label>Cidade de Destino</label>
+                            @Html.DropDownList("IdCidadeDestino", new SelectList(Model.Cidades, "IdCidade", "NmCidade"), new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label asp-for="Peso"></label>
+                            <input asp-for="Peso" class="form-control" />
+                            <span asp-validation-for="Peso" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label asp-for="Altura"></label>
+                            <input asp-for="Altura" class="form-control" />
+                            <span asp-validation-for="Altura" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label asp-for="Comprimento"></label>
+                            <input asp-for="Comprimento" class="form-control" />
+                            <span asp-validation-for="Comprimento" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label asp-for="Largura"></label>
+                            <input asp-for="Largura" class="form-control" />
+                            <span asp-validation-for="Largura" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-5 col-lg-2">
+                            <div class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary"> Cotar Frete  </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

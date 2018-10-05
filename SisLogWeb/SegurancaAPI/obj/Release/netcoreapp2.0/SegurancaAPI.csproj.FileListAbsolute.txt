@@ -1,0 +1,12 @@
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\bin\Release\netcoreapp2.0\SegurancaAPI.deps.json
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\bin\Release\netcoreapp2.0\SegurancaAPI.runtimeconfig.json
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\bin\Release\netcoreapp2.0\SegurancaAPI.runtimeconfig.dev.json
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\bin\Release\netcoreapp2.0\SegurancaAPI.dll
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\bin\Release\netcoreapp2.0\SegurancaAPI.pdb
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\obj\Release\netcoreapp2.0\SegurancaAPI.csprojAssemblyReference.cache
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\obj\Release\netcoreapp2.0\SegurancaAPI.csproj.CoreCompileInputs.cache
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\obj\Release\netcoreapp2.0\SegurancaAPI.AssemblyInfoInputs.cache
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\obj\Release\netcoreapp2.0\SegurancaAPI.AssemblyInfo.cs
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\obj\Release\netcoreapp2.0\SegurancaAPI.dll
+C:\Users\lindolfo.junior.INTRANET\Source\Repos\TCC\ExpedicaoAPI\SegurancaAPI\obj\Release\netcoreapp2.0\SegurancaAPI.pdb

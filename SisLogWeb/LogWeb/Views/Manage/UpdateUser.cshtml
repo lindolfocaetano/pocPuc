@@ -1,0 +1,56 @@
+﻿@model RegisterParceiroViewModel
+
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@using LogWeb.Helpers;
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Atualiazar usuário</title>
+</head>
+<body>
+
+    <h4>Atualizar dados de usuário</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form action="/Manage/UpdateUser" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" readonly />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CPF_CNPJ" class="control-label"></label>
+                    <input asp-for="CPF_CNPJ" class="form-control cpfCnpj" />
+                    <span asp-validation-for="CPF_CNPJ" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Perfils</label>
+                    @Html.DropDownList("NmPerfil", new SelectList(Model.Perfis, "NmPerfil", "NmPerfil", Model.NmPerfil), new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label asp-for="VlAtivo"></label>
+                        <input asp-for="VlAtivo" class="checkbox-inline"/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Salvar" class="btn btn-primary" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+
+    <div>
+        <a asp-controller="Manage" asp-action="ManagerUsers">Voltar para listagem</a>
+    </div>
+</body>
+</html>

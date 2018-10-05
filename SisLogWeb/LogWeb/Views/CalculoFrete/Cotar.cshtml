@@ -1,0 +1,78 @@
+@model LogWeb.Models.CalculoFrete.ValorFreteViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cota</title>
+</head>
+<body>
+    <br />
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4>
+                        @Html.Raw("Cotação de frete de " + Model.CidadeOrigem + " Para " + Model.CidadeDestino)
+                    </h4>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h4>Data da cotação:</h4>
+                        
+                    </div>
+                    <div class="col-lg-3">
+                        @Html.Raw(Model.DtCotacao.ToShortDateString())
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        Valor do Frete
+                    </div>
+                    <div class="col-lg-3">
+                        @Html.Raw(Model.VlFrete.ToString("c"))
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        Cubagem m³
+                    </div>
+                    <div class="col-lg-3">
+                        @Html.Raw(Model.Cubagem.ToString())
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        Dimensões informadas (A X C X L)
+                    </div>
+                    <div class="col-lg-3">
+                        @Html.Raw(Model.Altura +" X " + Model.Comprimento + " x " + Model.Largura)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        Prazo Estimado de Entrega:
+                    </div>
+                    <div class="col-lg-3">
+                        @Html.Raw(Model.PzEstimadoEntrega + " Dias Úteis")
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button class="btn btn-default">
+                    <a asp-action="Index">Nova Cotação</a>
+                </button>
+                <button type="submit" class="btn btn-primary"> Agendar Coleta</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
